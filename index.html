@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa | Tentex</title>
+    <link rel="icon" href="./pp.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="fade-out">
+
+    <header>
+        <!-- index.html DOSYASINDAKİ NAV'I BUNUNLA DEĞİŞTİR -->
+        <nav>
+            <div class="nav-left">
+                <a href="index.html" class="logo">Tentex</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                    <li><a href="projeler.html">Projeler</a></li>
+                    <li><a href="hakkimda.html">Hakkımda</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="https://github.com/Tentex1" target="_blank" class="github-link" aria-label="GitHub Profili"><i
+                        class="fab fa-github"></i></a>
+                <button id="theme-toggle" aria-label="Temayı Değiştir"><i class="fas fa-sun" id="icon-sun"></i><i
+                        class="fas fa-moon" id="icon-moon"></i></button>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <!-- Animasyon için yüklenme çubuğu -->
+            <div class="nav-loader"></div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- BU SAYFADA SADECE KARŞILAMA EKRANI VAR -->
+        <section id="hero">
+            <div class="hero-text">
+                <h1>Merhaba, ben <span class="highlight">Duran "Tentex"</span></h1>
+                <p>Modern web siteleri ve uygulamalar geliştiren bir yazılımcıyım.</p>
+                <a href="projeler.html" class="btn">Projelerimi Gör</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Duran "Tentex". Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

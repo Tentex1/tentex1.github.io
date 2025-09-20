@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler | Tentex</title> <!-- Başlık güncellendi -->
+    <link rel="icon" href="./pp.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="fade-out">
+    <header>
+        <!-- projeler.html DOSYASINDAKİ NAV'I BUNUNLA DEĞİŞTİR -->
+        <nav>
+            <div class="nav-left">
+                <a href="index.html" class="logo">Tentex</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="projeler.html" class="active">Projeler</a></li>
+                    <li><a href="hakkimda.html">Hakkımda</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="https://github.com/Tentex1" target="_blank" class="github-link" aria-label="GitHub Profili"><i
+                        class="fab fa-github"></i></a>
+                <button id="theme-toggle" aria-label="Temayı Değiştir"><i class="fas fa-sun" id="icon-sun"></i><i
+                        class="fas fa-moon" id="icon-moon"></i></button>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <!-- Animasyon için yüklenme çubuğu -->
+            <div class="nav-loader"></div>
+        </nav>
+    </header>
+
+    <!-- projeler.html DOSYASINDAKİ BU BÖLÜMÜ GÜNCELLE -->
+    <main>
+        <section id="projeler">
+            <h2>Projelerim</h2>
+            <!-- Projeler GitHub'dan otomatik olarak buraya yüklenecek -->
+            <div class="project-grid">
+                <p class="loading-message">GitHub'dan projeler yükleniyor...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Duran "Tentex". Tüm hakları saklıdır.</p> <!-- Footer güncellendi -->
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
