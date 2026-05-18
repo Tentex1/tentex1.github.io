@@ -70,8 +70,7 @@ Since this is a client-side static web application, it does not require complex 
    cd tentex1.github.io
    ```
 3. **Run it:**
-   * Simply double-click `index.html` to open it in your browser, or
-   * Run a simple local server (e.g., using VS Code's **Live Server** extension or Python's `python -m http.server`).
+   * Simply double-click `index.html` to open it in your browser.
 
 ---
 
