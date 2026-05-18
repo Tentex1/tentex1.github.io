@@ -96,11 +96,3 @@ Open `style.css` and adjust the HSL/HEX variables inside `:root`:
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-<p align="center">
-  <sub>Designed & Developed with Premium Neon Tech by <b>Antigravity AI</b></sub><br>
-  <sub>Google DeepMind - Advanced Agentic Coding Team</sub><br>
-  <sub>Specially crafted for <b>Duran "Tentex"</b> (2026)</sub>
-</p>
