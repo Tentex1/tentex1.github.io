@@ -1,13 +1,16 @@
-/* --- HAREKETLİ ALTIN TEMA v3 (TÜM ELEMENTLER NEON) --- */
-
 @keyframes gradient-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 :root {
-    /* DARK TEMA (VARSAYILAN) */
     --bg-color: #111111;
     --card-color: rgba(24, 24, 27, 0.7);
     --text-color: #e2e8f0;
@@ -15,14 +18,11 @@
     --accent-gradient: linear-gradient(60deg, #fffc7f, #fdda7e, #f7c96e, #f5b84f);
     --nav-bg: rgba(17, 17, 17, 0.8);
     --border-color: rgba(255, 255, 255, 0.1);
-
-    /* YENİ: Neon renklerini değişkenlere atadık */
-    --neon-main-color: #f7c96e; /* Altın */
-    --neon-glow-color: #fffc7f;  /* Parlak Sarı */
+    --neon-main-color: #f7c96e;
+    --neon-glow-color: #fffc7f;
 }
 
 body.light-theme {
-    /* LIGHT TEMA */
     --bg-color: #f0f2f5;
     --card-color: rgba(255, 255, 255, 0.7);
     --text-color: #1e293b;
@@ -30,13 +30,19 @@ body.light-theme {
     --accent-gradient: linear-gradient(60deg, #f7c96e, #e67e22);
     --nav-bg: rgba(255, 255, 255, 0.8);
     --border-color: rgba(0, 0, 0, 0.1);
-    
     --neon-main-color: #e67e22;
     --neon-glow-color: #f7c96e;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Fira Code', monospace;
@@ -49,40 +55,198 @@ body {
     flex-direction: column;
 }
 
-/* --- NAVİGASYON --- */
-nav { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; min-height: 8vh; background-color: var(--nav-bg); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); position: fixed; width: 100%; z-index: 10; }
-.nav-left { display: flex; align-items: center; gap: 60px; }
-.logo { background: var(--accent-gradient); background-clip: text; -webkit-background-clip: text; color: transparent; background-size: 200% 200%; animation: gradient-animation 6s ease-in-out infinite; font-size: 20px; font-weight: 700; text-decoration: none; }
-.nav-links { display: flex; list-style: none; gap: 20px; }
-.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 700; padding: 0.5em 1.2em; border-radius: 999px; transition: all 0.4s ease; }
-.nav-links a:not(.active):hover { color: var(--text-color); background-color: rgba(255, 255, 255, 0.1); }
-.nav-links a.active { color: var(--bg-color); background: var(--accent-gradient); background-size: 300% 300%; animation: gradient-animation 5s ease infinite; }
-.nav-actions { display: flex; align-items: center; gap: 20px; }
-.github-link { color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s ease, text-shadow 0.3s ease; display: flex; align-items: center; }
-.github-link:hover { color: var(--neon-glow-color); text-shadow: 0 0 8px var(--neon-glow-color); }
-#theme-toggle { background: none; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; position: relative; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; transition: color 0.3s ease, text-shadow 0.3s ease; }
-#theme-toggle:hover { color: var(--neon-glow-color); text-shadow: 0 0 8px var(--neon-glow-color); }
-#theme-toggle i { position: absolute; transition: opacity 0.3s ease, transform 0.3s ease; }
-#icon-moon { opacity: 0; transform: scale(0); }
-body.light-theme #icon-sun { opacity: 0; transform: scale(0); }
-body.light-theme #icon-moon { opacity: 1; transform: scale(1); }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    min-height: 8vh;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
 
-/* --- ANA İÇERİK BÖLÜMÜ --- */
-main { transition: opacity 0.4s ease-in-out; flex: 1; display: flex; justify-content: center; align-items: center; width: 100%; padding-top: 8vh; }
-body.fade-out main { opacity: 0; }
-section { padding: 50px 20px; max-width: 1000px; margin: 0 auto; text-align: center; }
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
 
-/* --- BAŞLIKLAR VE DİĞER ELEMENTLER --- */
-h1, h2, .highlight { background: var(--accent-gradient); background-clip: text; -webkit-background-clip: text; color: transparent; background-size: 300% 300%; animation: gradient-animation 5s ease infinite; /* YENİ: Neon Parlama */ text-shadow: 0 0 15px rgba(247, 201, 110, 0.5); }
-.light-theme h1, .light-theme h2, .light-theme .highlight { color: #e67e22; background: none; animation: none; text-shadow: none; }
-h1 { font-size: 3rem; color: var(--text-color); }
-.light-theme h1 { color: var(--text-color); }
-h1 .highlight { display: inline-block; }
-h2 { font-size: 2.5rem; margin-bottom: 40px; }
-p { color: var(--text-muted); }
-.about-container { display: flex; align-items: center; justify-content: center; gap: 40px; text-align: left; }
+.logo {
+    background: var(--accent-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-animation 6s ease-in-out infinite;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
 
-/* YENİ: NEON EFEKTİ UYGULANAN BUTON */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0.5em 1.2em;
+    border-radius: 999px;
+    transition: all 0.4s ease;
+}
+
+.nav-links a:not(.active):hover {
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active {
+    color: var(--bg-color);
+    background: var(--accent-gradient);
+    background-size: 300% 300%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.github-link {
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.github-link:hover {
+    color: var(--neon-glow-color);
+    text-shadow: 0 0 8px var(--neon-glow-color);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#theme-toggle:hover {
+    color: var(--neon-glow-color);
+    text-shadow: 0 0 8px var(--neon-glow-color);
+}
+
+#theme-toggle i {
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#icon-moon {
+    opacity: 0;
+    transform: scale(0);
+}
+
+body.light-theme #icon-sun {
+    opacity: 0;
+    transform: scale(0);
+}
+
+body.light-theme #icon-moon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+main {
+    transition: opacity 0.4s ease-in-out;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 8vh;
+}
+
+body.fade-out main {
+    opacity: 0;
+}
+
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1,
+h2,
+.highlight {
+    background: var(--accent-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 300% 300%;
+    animation: gradient-animation 5s ease infinite;
+    text-shadow: 0 0 15px rgba(247, 201, 110, 0.5);
+}
+
+.light-theme h1,
+.light-theme h2,
+.light-theme .highlight {
+    color: #e67e22;
+    background: none;
+    animation: none;
+    text-shadow: none;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+.light-theme h1 {
+    color: var(--text-color);
+}
+
+h1 .highlight {
+    display: inline-block;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+p {
+    color: var(--text-muted);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+}
+
 .btn {
     background: transparent;
     border: 1px solid var(--neon-main-color);
@@ -98,11 +262,11 @@ p { color: var(--text-muted); }
 }
 
 #hero p {
-    margin-bottom: 60px; /* Bu değeri artırarak butonu daha da aşağı alabilirsin */
+    margin-bottom: 60px;
 }
 
 #hero .btn {
-    margin-top: 40px; /* Bu değeri artırarak daha da aşağı alabilirsin */
+    margin-top: 40px;
 }
 
 .btn:hover {
@@ -112,78 +276,437 @@ p { color: var(--text-muted); }
     text-shadow: none;
 }
 
-/* YENİ: NEON EFEKTİ UYGULANAN PROFİL FOTOĞRAFI */
 .profile-pic {
-    width: 200px; height: 200px; border-radius: 50%; object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
     border: 2px solid var(--neon-main-color);
     box-shadow: 0 0 25px rgba(247, 201, 110, 0.5);
 }
 
-/* --- PROJE BÖLÜMÜ --- */
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.loading-message { width: 100%; text-align: center; color: var(--text-muted); }
-.project-card { background: var(--card-color); backdrop-filter: blur(10px); border: 1px solid var(--border-color); border-radius: 10px; padding: 25px; text-align: left; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
-.project-card:hover { transform: translateY(-10px); border-color: var(--neon-main-color); box-shadow: 0 0 20px rgba(247, 201, 110, 0.3); }
-.card-content { flex-grow: 1; }
-.project-card h3 { font-size: 1.5rem; margin: 0 0 10px 0; color: var(--text-color); }
-.project-card p { font-size: 0.9rem; padding: 0; color: var(--text-muted); margin-bottom: 20px; }
-.card-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-
-/* YENİ: NEON EFEKTİ UYGULANAN DİL ETİKETİ */
-.project-language {
-    border: 1px solid var(--neon-main-color); padding: 3px 10px; border-radius: 5px;
-    color: var(--neon-glow-color); text-shadow: 0 0 8px var(--neon-glow-color);
-    box-shadow: 0 0 12px rgba(247, 201, 110, 0.2);
-    font-size: 0.8rem; font-weight: bold; transition: all 0.3s ease;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
-.project-card:hover .project-language { box-shadow: 0 0 16px rgba(247, 201, 110, 0.4); border-color: var(--neon-glow-color); }
 
-/* YENİ: NEON HOVER EFEKTİ UYGULANAN LİNKLER */
-.project-links a {
-    color: var(--text-muted); text-decoration: none; font-weight: bold;
+.loading-message {
+    width: 100%;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.project-card {
+    background: var(--card-color);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--neon-main-color);
+    box-shadow: 0 0 20px rgba(247, 201, 110, 0.3);
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    padding: 0;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-language {
+    border: 1px solid var(--neon-main-color);
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: var(--neon-glow-color);
+    text-shadow: 0 0 8px var(--neon-glow-color);
+    box-shadow: 0 0 12px rgba(247, 201, 110, 0.2);
+    font-size: 0.8rem;
+    font-weight: bold;
     transition: all 0.3s ease;
 }
+
+.project-card:hover .project-language {
+    box-shadow: 0 0 16px rgba(247, 201, 110, 0.4);
+    border-color: var(--neon-glow-color);
+}
+
+.project-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
 .project-links a:hover {
     color: var(--neon-glow-color);
     text-shadow: 0 0 8px var(--neon-glow-color);
 }
 
-/* --- İLETİŞİM BÖLÜMÜ --- */
-.social-links { margin-top: 20px; display: flex; justify-content: center; gap: 30px; }
-.social-links a { color: var(--text-muted); font-size: 2.5rem; transition: all 0.3s ease; }
-.social-links a:hover { color: var(--neon-glow-color); text-shadow: 0 0 10px var(--neon-glow-color); transform: translateY(-5px); }
-footer { text-align: center; padding: 20px 0; color: var(--text-muted); }
-
-/* --- MOBİL UYUMLULUK --- */
-.burger { display: none; cursor: pointer; }
-@media screen and (max-width: 768px) {
-    .nav-links { display: none; } .nav-left { gap: 0; } .burger { display: block; z-index: 101; }
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
-/* style.css dosyasının en altına ekle */
 
-/* --- NAVBAR GEÇİŞ ANİMASYONU --- */
+.social-links a {
+    color: var(--text-muted);
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--neon-glow-color);
+    text-shadow: 0 0 10px var(--neon-glow-color);
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-muted);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        top: 0vh;
+        height: 100vh;
+        width: 60%;
+        background-color: var(--nav-bg);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border-left: 1px solid var(--border-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transform: translateX(100%);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+        z-index: 99;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .nav-left {
+        gap: 0;
+    }
+
+    .burger {
+        display: block;
+        z-index: 101;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 .nav-loader {
-    position: absolute; /* Navigasyon çubuğuna göre konumlandır */
+    position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%; /* Başlangıçta genişliği sıfır */
-    height: 3px; /* Kalınlığı */
-    background: var(--accent-gradient); /* Temamızın güzel gradyanı */
+    width: 0%;
+    height: 3px;
+    background: var(--accent-gradient);
     background-size: 200% 200%;
     animation: gradient-animation 4s ease infinite;
-    box-shadow: 0 0 15px var(--neon-main-color); /* Neon parlama efekti */
-    
-    /* Genişlik değişimini 400ms'de yumuşakça yap */
+    box-shadow: 0 0 15px var(--neon-main-color);
     transition: width 0.4s ease-in-out;
 }
 
-/* JavaScript bu sınıfı eklediğinde animasyon başlayacak */
 .nav-loader.loading {
-    width: 100%; /* Genişliği %100'e çıkar */
+    width: 100%;
 }
 
-/* Navigasyonun kendisi için position:relative eklemeyi unutmayalım */
 nav {
-    position: fixed; /* 'fixed' zaten 'relative' gibi davranır, ama garanti olsun */
-    /* ... (mevcut diğer nav stilleri) ... */
+    position: fixed;
 }
+
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(10, 10, 10, 0);
+    backdrop-filter: blur(0px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+    background-color: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    background: var(--card-color);
+    border: 1px solid var(--neon-main-color);
+    box-shadow: 0 0 35px rgba(247, 201, 110, 0.4);
+    padding: 35px 30px 30px 30px;
+    border-radius: 15px;
+    transform: scale(0.85);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: modalGlow 2.5s infinite alternate;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--neon-glow-color);
+    text-shadow: 0 0 10px var(--neon-glow-color);
+}
+
+.modal-content h2 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    text-shadow: 0 0 15px rgba(247, 201, 110, 0.3);
+}
+
+.modal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0 20px 0;
+}
+
+.modal-badge {
+    background: rgba(247, 201, 110, 0.08);
+    border: 1px solid rgba(247, 201, 110, 0.15);
+    color: var(--neon-glow-color);
+    text-shadow: 0 0 5px rgba(247, 201, 110, 0.4);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#modal-description {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 25px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.modal-actions .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-actions .btn i {
+    margin-right: 8px;
+}
+
+.modal-actions .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.modal-actions .btn-secondary:hover {
+    border-color: var(--neon-main-color);
+    color: var(--neon-glow-color);
+    box-shadow: 0 0 15px rgba(247, 201, 110, 0.2);
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.lang-btn:hover {
+    color: var(--neon-glow-color);
+    border-color: var(--neon-main-color);
+    box-shadow: 0 0 10px rgba(247, 201, 110, 0.3);
+}
+
+body.light-theme .modal.show {
+    background-color: rgba(240, 242, 245, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+body.light-theme .modal-content {
+    background: #ffffff;
+    border: 1px solid rgba(230, 126, 34, 0.3);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    animation: none;
+}
+
+body.light-theme .close-modal {
+    color: var(--text-muted);
+}
+
+body.light-theme .close-modal:hover {
+    color: var(--neon-main-color);
+}
+
+body.light-theme .modal-badge {
+    background: rgba(230, 126, 34, 0.06);
+    border: 1px solid rgba(230, 126, 34, 0.2);
+    color: var(--neon-main-color);
+    text-shadow: none;
+}
+
+body.light-theme .btn {
+    color: var(--neon-main-color);
+    text-shadow: none;
+    box-shadow: 0 0 12px rgba(230, 126, 34, 0.1);
+}
+
+body.light-theme .btn:hover {
+    color: #ffffff;
+    background-color: var(--neon-main-color);
+    box-shadow: 0 0 20px rgba(230, 126, 34, 0.4);
+}
+
+body.light-theme .modal-actions .btn-secondary {
+    border-color: rgba(0, 0, 0, 0.15);
+    color: var(--text-color);
+}
+
+body.light-theme .modal-actions .btn-secondary:hover {
+    border-color: var(--neon-main-color);
+    color: var(--neon-main-color);
+    box-shadow: 0 0 15px rgba(230, 126, 34, 0.15);
+}
+
+@keyframes modalGlow {
+    from {
+        box-shadow: 0 0 25px rgba(247, 201, 110, 0.3);
+    }
+    to {
+        box-shadow: 0 0 35px rgba(247, 201, 110, 0.5);
+    }
+}
+
+/*
+  Designed & Developed with Premium Neon Tech by Antigravity AI
+  Google DeepMind - Advanced Agentic Coding Team
+  Specially crafted for Duran "Tentex" (2026)
+*/

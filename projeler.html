@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeler | Tentex</title> <!-- Başlık güncellendi -->
+    <title>Projeler | Tentex</title>
     <link rel="icon" href="./pp.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,18 +15,18 @@
 
 <body class="fade-out">
     <header>
-        <!-- projeler.html DOSYASINDAKİ NAV'I BUNUNLA DEĞİŞTİR -->
         <nav>
             <div class="nav-left">
                 <a href="index.html" class="logo">Tentex</a>
                 <ul class="nav-links">
-                    <li><a href="index.html">Ana Sayfa</a></li>
-                    <li><a href="projeler.html" class="active">Projeler</a></li>
-                    <li><a href="hakkimda.html">Hakkımda</a></li>
-                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="index.html" data-translate="nav-home">Ana Sayfa</a></li>
+                    <li><a href="projeler.html" class="active" data-translate="nav-projects">Projeler</a></li>
+                    <li><a href="hakkimda.html" data-translate="nav-about">Hakkımda</a></li>
+                    <li><a href="iletisim.html" data-translate="nav-contact">İletişim</a></li>
                 </ul>
             </div>
             <div class="nav-actions">
+                <button id="lang-toggle" aria-label="Dili Değiştir" class="lang-btn">EN</button>
                 <a href="https://github.com/Tentex1" target="_blank" class="github-link" aria-label="GitHub Profili"><i
                         class="fab fa-github"></i></a>
                 <button id="theme-toggle" aria-label="Temayı Değiştir"><i class="fas fa-sun" id="icon-sun"></i><i
@@ -37,26 +37,49 @@
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
-            <!-- Animasyon için yüklenme çubuğu -->
             <div class="nav-loader"></div>
         </nav>
     </header>
 
-    <!-- projeler.html DOSYASINDAKİ BU BÖLÜMÜ GÜNCELLE -->
     <main>
         <section id="projeler">
-            <h2>Projelerim</h2>
-            <!-- Projeler GitHub'dan otomatik olarak buraya yüklenecek -->
+            <h2 data-translate="projects-title">Projelerim</h2>
             <div class="project-grid">
-                <p class="loading-message">GitHub'dan projeler yükleniyor...</p>
+                <p class="loading-message" data-translate="projects-loading">GitHub'dan projeler yükleniyor...</p>
             </div>
         </section>
     </main>
 
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+            <h2 id="modal-title">Proje Adı</h2>
+            
+            <div class="modal-meta">
+                <span id="modal-lang" class="modal-badge"><i class="fas fa-code"></i> Dil</span>
+                <span id="modal-stars" class="modal-badge"><i class="fas fa-star"></i> 0 Yıldız</span>
+                <span id="modal-forks" class="modal-badge"><i class="fas fa-code-branch"></i> 0 Fork</span>
+            </div>
+            
+            <p id="modal-description">Yükleniyor...</p>
+            
+            <div class="modal-actions">
+                <a id="modal-github-link" href="#" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub'da Gör</a>
+                <a id="modal-live-link" href="#" target="_blank" class="btn btn-secondary" style="display: none;"><i class="fas fa-external-link-alt"></i> Canlı Site</a>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2025 Duran "Tentex". Tüm hakları saklıdır.</p> <!-- Footer güncellendi -->
+        <p data-translate="footer-rights">&copy; 2026 Duran "Tentex". Tüm hakları saklıdır.</p>
     </footer>
     <script src="script.js"></script>
 </body>
 
 </html>
+
+<!--
+  Designed & Developed with Premium Neon Tech by Antigravity AI
+  Google DeepMind - Advanced Agentic Coding Team
+  Specially crafted for Duran "Tentex" (2026)
+-->

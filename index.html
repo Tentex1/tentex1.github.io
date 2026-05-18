@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 
 <head>
@@ -20,13 +20,14 @@
             <div class="nav-left">
                 <a href="index.html" class="logo">Tentex</a>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Ana Sayfa</a></li>
-                    <li><a href="projeler.html">Projeler</a></li>
-                    <li><a href="hakkimda.html">Hakkımda</a></li>
-                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="index.html" class="active" data-translate="nav-home">Ana Sayfa</a></li>
+                    <li><a href="projeler.html" data-translate="nav-projects">Projeler</a></li>
+                    <li><a href="hakkimda.html" data-translate="nav-about">Hakkımda</a></li>
+                    <li><a href="iletisim.html" data-translate="nav-contact">İletişim</a></li>
                 </ul>
             </div>
             <div class="nav-actions">
+                <button id="lang-toggle" aria-label="Dili Değiştir" class="lang-btn">EN</button>
                 <a href="https://github.com/Tentex1" target="_blank" class="github-link" aria-label="GitHub Profili"><i
                         class="fab fa-github"></i></a>
                 <button id="theme-toggle" aria-label="Temayı Değiştir"><i class="fas fa-sun" id="icon-sun"></i><i
@@ -44,19 +45,25 @@
     <main>
         <section id="hero">
             <div class="hero-text">
-                <h1>Merhaba, ben <span class="highlight">Duran "Tentex"</span></h1>
-                <p>Modern yazılımlar ve yazılımla ile uğraşan biriyim.</p>
-                <a href="projeler.html" class="btn">Projelerimi Gör</a>
+                <h1 data-translate="hero-title">Merhaba, ben <span class="highlight">Duran 👋</span></h1>
+                <p data-translate="hero-desc">🚀 <strong>Yazılım Geliştirici & Açık Kaynak Katkıcısı</strong><br><br>
+                Masaüstü uygulamaları geliştirmeye odaklanan ve Android ekosistemini keşfeden tutkulu bir yazılımcıyım. Şu sıralar C# ve modern arayüz (UI) kütüphanelerine odaklanıyorum.</p>
+                <a href="projeler.html" class="btn" data-translate="hero-btn">Projelerimi Gör</a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Duran "Tentex". Tüm hakları saklıdır.</p>
+        <p data-translate="footer-rights">&copy; 2026 Duran "Tentex". Tüm hakları saklıdır.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 
-
 </html>
+
+<!--
+  Designed & Developed with Premium Neon Tech by Antigravity AI
+  Google DeepMind - Advanced Agentic Coding Team
+  Specially crafted for Duran "Tentex" (2026)
+-->
