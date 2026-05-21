@@ -27,7 +27,7 @@ const translations = {
         "nav-contact": "Contact",
         "footer-rights": "&copy; 2026 Duran \"Tentex\". All rights reserved.",
         "hero-title": "Hello, I'm <span class=\"highlight\">Duran 👋</span>",
-        "hero-desc": "I am a passionate software developer studying IT in high school and heavily focused on the <strong>.NET ecosystem</strong>. I craft modern desktop and mobile experiences using <strong>C# & XAML</strong>, while exploring next-gen UI frameworks and cloud backends.",        "hero-btn": "See My Projects",
+        "hero-desc": "I am a passionate software developer currently attending a computer science high school, with a focus on the .NET ecosystem. I develop modern desktop and mobile experiences using C# and XAML, and work with next-generation UI libraries and cloud solutions.",
         "projects-title": "My Projects",
         "projects-loading": "Loading projects from GitHub...",
         "about-title": "About Me",
